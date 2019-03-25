@@ -1,0 +1,34 @@
+version: "2"
+services:
+  mongo:
+    image: mongo:3.4
+    container_name: mongo
+    privileged: true
+    restart: always
+    ports:
+      - "27017:27017"
+    networks:
+      - yapi-net
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=anjubao
+      - MONGO_INITDB_ROOT_PASSWORD=Anjubao1234
+      - MONGO_INITDB_DATABASE=yapi
+    volumes:
+      - ./mongo-data:/data/mongo-data
+  yapi:
+    image: 172.25.2.140/anjubao_develop/yapi-svr
+    container_name: yapi-srv
+    privileged: true
+    restart: always
+    depends_on:
+      - mongo
+    ports:
+      - "8000:3000"
+    networks:
+      - yapi-net
+    volumes:
+      - ./config.json:/app/config.json
+      - ./yapi-runtime:/app/runtime
+networks:
+  yapi-net:
+  
