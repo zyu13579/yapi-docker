@@ -1,6 +1,6 @@
 {
   "port": "3000",
-  "adminAccount": "anjubao",
+  "adminAccount": "admin@anjubao.com",
   "db": {
     "servername": "mongo",
     "DATABASE": "yapi",
