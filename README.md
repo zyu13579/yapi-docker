@@ -10,11 +10,13 @@
 ## 下载yapi
 wget -O yapi.tgz http://registry.npm.taobao.org/yapi-vendor/download/yapi-vendor-1.5.7.tgz
 
-## 编译
-docker build -t 172.25.2.140/anjubao-devops/yapi-svr .
+## 本地编译
+docker build -t yapi-svr .
 
-### 推送私有库
-docker push 172.25.2.140/anjubao-devops/yapi-svr
+### 私有库编译和推送
+- docker build -t 127.0.0.1/devops/yapi-svr .
+- 修改docker-compose.xml中, image: 127.0.0.1/devops/yapi-svr
+- docker push 127.0.0.1/devops/yapi-svr
 
 ## 启动
 ### 创建网络
@@ -22,7 +24,7 @@ docker network create --subnet=172.18.0.0/16 yapi-net
 
 ### 启动mongodb
 - docker-compose -f docker-compose-mongodb.yml up -d
-- 等待启动完毕
+- 等待启动完毕,然后测试是否启动成功
 - curl http://localhost:27017
 
 

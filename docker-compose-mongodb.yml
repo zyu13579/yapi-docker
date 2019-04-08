@@ -8,8 +8,8 @@ services:
     ports:
       - "27017:27017"
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=anjubao
-      - MONGO_INITDB_ROOT_PASSWORD=Anjubao1234
+      - MONGO_INITDB_ROOT_USERNAME=yapi
+      - MONGO_INITDB_ROOT_PASSWORD=Yapi1234
       
     volumes:
       - ./mongo-data:/data/db

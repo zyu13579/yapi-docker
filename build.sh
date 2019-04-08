@@ -9,6 +9,7 @@ docker network create --subnet=172.18.0.0/16 yapi-net
 #编译
 docker build -t yapi-svr .
 #推送私有库
+#docker build -t 127.0.0.1/devops/yapi-svr .
 #docker push 127.0.0.1/devops/yapi-svr
 
 #启动mongodb
