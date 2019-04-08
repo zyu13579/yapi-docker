@@ -32,7 +32,7 @@ docker network create --subnet=172.18.0.0/16 yapi-net
 docker-compose up -d
 
 # 访问
-http://172.25.2.136:8000
+http://127.0.0.1:8000
 
 # 问题
 - 初始化锁不成功，缺少init.lock ;
