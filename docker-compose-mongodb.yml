@@ -7,17 +7,15 @@ services:
     restart: always
     ports:
       - "27017:27017"
-    networks:
-      - yapi-net
     environment:
       - MONGO_INITDB_ROOT_USERNAME=anjubao
       - MONGO_INITDB_ROOT_PASSWORD=Anjubao1234
       
     volumes:
       - ./mongo-data:/data/db
+
 networks:
-  yapi-net:
-    ipam:
-        config:
-            - subnet: 10.10.1.0/24
+  default:
+    external:
+      name: yapi-net
   

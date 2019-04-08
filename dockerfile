@@ -1,6 +1,6 @@
 FROM node:10.15.3-alpine as builder
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories \
- && apk add --no-cache git python make openssl tar gcc bash nc
+ && apk add --no-cache git python make openssl tar gcc bash
 ADD yapi.tgz /home/
 RUN mkdir /yapi && mv /home/package /yapi/vendors
 RUN cd /yapi/vendors && \

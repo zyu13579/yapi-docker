@@ -8,16 +8,12 @@ services:
     restart: always
     ports:
       - "8000:3000"
-    networks:
-      - yapi-net
     volumes:
       - ./config.json:/app/config.json
       - ./yapi-runtime:/app/runtime
-
         
 networks:
-  yapi-net:
-    ipam:
-        config:
-            - subnet: 10.10.1.0/24
+  default:
+    external:
+      name: yapi-net
   

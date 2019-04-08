@@ -12,7 +12,10 @@ cd /yapi/vendors
 # 如果初始化文件文件存在,则直接运行,否则初始化
 if [ ! -f "$lockPath" ]; then
   # 启动Yapi初始化
-  node server/install.js
+  r = node server/install.js
+	if [ r != 0 ]; then
+		node server/app.js
+	fi
 else
   # 运行yapi管理系统
   node server/app.js
