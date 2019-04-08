@@ -14,6 +14,7 @@ if [ ! -f "$lockPath" ]; then
   # 启动Yapi初始化
   r = node server/install.js
 	if [ r != 0 ]; then
+		# 不能初始化完成，已初始化|初始化完成但是init.lock不存在，则开始运行服务
 		node server/app.js
 	fi
 else
