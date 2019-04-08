@@ -1,12 +1,12 @@
 {
   "port": "3000",
-  "adminAccount": "admin@anjubao.com",
+  "adminAccount": "admin@admin.com",
   "db": {
     "servername": "mongo",
     "DATABASE": "yapi",
     "port": 27017,
-    "user": "anjubao",
-    "pass": "Anjubao1234",
+    "user": "yapi",
+    "pass": "Yapi1234",
     "authSource": "admin"
   }
 }

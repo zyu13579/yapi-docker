@@ -2,7 +2,7 @@ version: "2"
 services:
 
   yapi-srv:
-    image: 172.25.2.140/anjubao-devops/yapi-svr
+    image: yapi-svr
     container_name: yapi-srv
     privileged: true
     restart: always
