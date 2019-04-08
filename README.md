@@ -1,7 +1,9 @@
 #yapi安装
 
-第一次干干净净安装，直接执行build.sh
+直接执行build.sh
 
+
+===================================步骤=====================
 
 ##下载yapi
 wget -O yapi.tgz http://registry.npm.taobao.org/yapi-vendor/download/yapi-vendor-1.5.7.tgz
